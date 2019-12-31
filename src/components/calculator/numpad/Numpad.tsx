@@ -32,8 +32,8 @@ function Numpad(props: Props) {
                 <Button text={"+"} onClick={numberPressed} type={"operation"} operation={"add"}></Button>
             </div>
             <div className="numpad-row">                   
-                <Button text={"0"} onClick={numberPressed} type={"number"}></Button>
                 <Button text={"C"} onClick={numberPressed} type={"clear"}></Button>               
+                <Button text={"0"} onClick={numberPressed} type={"number"}></Button>
                 <Button text={"-"} onClick={numberPressed} type={"operation"} operation={"subtract"}></Button>
                 <Button text={"="} onClick={numberPressed} type={"result"}></Button>
             </div>
