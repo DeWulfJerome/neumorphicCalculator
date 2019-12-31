@@ -80,7 +80,7 @@ function Calculator(props: Props) {
     }
 
     return (
-        <div>           
+        <div className="calculator">           
             <Screen screenText={calcString}></Screen>
             <Numpad numberPressed={pressed}></Numpad>
         </div>

@@ -7,7 +7,7 @@ const App: React.FC = () => {
 
 
   return (
-    <div style={{height: "100vh", display: "flex", justifyContent: "center", alignItems: "center", backgroundColor: "#CBDCEC"}}>
+    <div style={{height: "100vh", display: "flex", justifyContent: "center", alignItems: "center"}}>
      <Calculator></Calculator>
     </div>
   );

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import "./numpadStyle.css";
 
 interface Props {
@@ -9,10 +9,14 @@ interface Props {
 }
 
 const Button: React.FC<Props> = (props: Props) =>{
-    const {text, onClick, type, operation} = props
+    const {text, onClick, type, operation} = props;
+    const [mouseDown, setMouseDown] = useState<boolean>(false);
 
     return (
-        <div className="calc-num-btn" onClick={() => {onClick(text, type, operation);}}>
+        <div className={ mouseDown ? ("calc-num-btn down")  : ("calc-num-btn")}
+        onMouseDown={() => {setMouseDown(true);}} 
+        onMouseUp={() => {setMouseDown(false)}} 
+        onClick={() => {onClick(text, type, operation);}}>
           {text}
         </div>
     )
